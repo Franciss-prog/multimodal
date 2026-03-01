@@ -17,7 +17,7 @@
 						CleanQuest
 					</h1>
 					<p class="mt-1 text-xl font-light text-gray-500 md:text-2xl lg:text-3xl">
-						Respect the planet like you respect your name's.
+						Respect the planet like you respect your names.
 					</p>
 				</div>
 

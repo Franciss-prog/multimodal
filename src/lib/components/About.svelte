@@ -83,7 +83,7 @@
 
 	<!-- Tab Bar -->
 	<div class="sticky top-0 z-10 border-b border-gray-100 bg-white px-4">
-		<div class="mx-auto flex max-w-4xl gap-1 overflow-x-auto py-3">
+		<div class="mx-auto flex max-w-4xl flex-wrap justify-center gap-1 overflow-x-auto py-3">
 			{#each pollutions as p}
 				<button
 					on:click={() => (activeTab = p.id)}
@@ -143,10 +143,10 @@
 			<!-- Image Gallery -->
 			<div>
 				<h3 class="mb-4 text-xs font-semibold tracking-widest text-gray-400 uppercase">Gallery</h3>
-				<div class="grid grid-cols-3 gap-3">
+				<div class="grid grid-cols-3 gap-3 max-md:grid-cols-1">
 					{#each active.images as img, i}
 						<div
-							class="aspect-video w-full overflow-hidden rounded-xl border"
+							class="aspect-video max-h-48 w-full overflow-hidden rounded-xl border max-sm:aspect-square sm:max-h-none"
 							style="background:{active.bg}; border-color:{active.border}"
 						>
 							{#if img}
