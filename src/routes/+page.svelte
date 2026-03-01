@@ -1,7 +1,5 @@
 <script lang="ts">
+	import Landing from '$lib/components/Landing.svelte';
 </script>
 
-<section></section>
-
-<section></section>
-<section></section>
+<Landing />
