@@ -9,15 +9,18 @@
 		<div class="flex flex-1 gap-6">
 			<div class="flex flex-col justify-center gap-6">
 				<div>
-					<h1 class="text-6xl leading-tight font-black text-gray-800">Pollution</h1>
-					<p class="mt-1 text-2xl font-light text-gray-500">Free Environment</p>
+					<h1 class="text-6xl leading-tight font-black text-gray-800">CleanQuest</h1>
+					<p class="mt-1 text-2xl font-light text-gray-500">
+						Respect the planet like you respect your name.
+					</p>
 				</div>
 
-				<button
+				<a
 					class="w-fit rounded-full bg-[#5cb85c] px-8 py-3 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#4aa04a]"
+					href="/about"
 				>
 					Read More
-				</button>
+				</a>
 
 				<!-- Info blocks -->
 				<div class="mt-8 flex gap-12">

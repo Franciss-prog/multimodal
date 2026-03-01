@@ -1,4 +1,13 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	$: pathname = $page.url.pathname;
+
+	// create  a array of objects for the navigation links
+	const navs = [
+		{ id: 1, name: 'Home', link: '/' },
+		{ id: 2, name: 'About', link: '/about' },
+		{ id: 3, name: 'Forums', link: '/discussion' }
+	];
 </script>
 
 <!-- Nav -->
@@ -10,8 +19,7 @@
 		</div>
 	</div>
 	<ul class="flex items-center gap-10 text-sm font-medium tracking-wide text-gray-500">
-		<li><a href="/" class="text-gray-700 transition-colors hover:text-[#5cb85c]">HOME</a></li>
-		<li><a href="/about" class="transition-colors hover:text-[#5cb85c]">ABOUT</a></li>
-		<li><a href="/discussion" class="transition-colors hover:text-[#5cb85c]">FORUMS</a></li>
+		{#each navs as { name, link, id } (id)}
+			<li class={pathname === link ? 'text-[#5cb85c]' : ''}><a href={link}>{name}</a></li>{/each}
 	</ul>
 </nav>
