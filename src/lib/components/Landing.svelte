@@ -17,7 +17,7 @@
 					class="w-fit rounded-full bg-[#5cb85c] px-8 py-3 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#4aa04a] lg:px-10 lg:py-4 lg:text-base"
 				>
 					Read More
-				</button>
+				</a>
 
 				<!-- Info blocks -->
 				<div class="mt-4 flex flex-col gap-8 sm:flex-row sm:gap-12 md:mt-8 lg:gap-16">
