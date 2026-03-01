@@ -48,27 +48,13 @@
 	{#if menuOpen}
 		<div class="absolute top-full right-0 left-0 z-50 bg-white shadow-md md:hidden">
 			<ul class="flex flex-col px-6 py-2 text-sm font-medium tracking-wide text-gray-500">
-				<li class="border-b border-gray-100">
-					<a
-						href="/"
-						onclick={() => (menuOpen = false)}
-						class="block py-3 text-gray-700 transition-colors hover:text-[#5cb85c]">HOME</a
-					>
-				</li>
-				<li class="border-b border-gray-100">
-					<a
-						href="/about"
-						onclick={() => (menuOpen = false)}
-						class="block py-3 transition-colors hover:text-[#5cb85c]">ABOUT</a
-					>
-				</li>
-				<li>
-					<a
-						href="/discussion"
-						onclick={() => (menuOpen = false)}
-						class="block py-3 transition-colors hover:text-[#5cb85c]">FORUMS</a
-					>
-				</li>
+				{#each navLinks as { name, href, id } (id)}
+					<li>
+						<a {href} class={`${pathname === href ? 'text-[#5cb85c]' : 'hover:text-[#5cb85c]'}`}
+							>{name}</a
+						>
+					</li>
+				{/each}
 			</ul>
 		</div>
 	{/if}
