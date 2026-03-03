@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import DiscussionThread from '$lib/components/DiscussionThread.svelte';
+	import type { PageData, ActionData } from './$types';
 
-	let id = $derived(page.params.id ?? '');
+	let { data, form }: { data: PageData; form: ActionData } = $props();
 </script>
 
-<DiscussionThread {id} />
+<DiscussionThread discussion={data.discussion} replies={data.replies} {form} />
